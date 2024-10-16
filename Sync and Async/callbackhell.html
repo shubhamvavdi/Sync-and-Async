@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Explain Nested
+      // var age = 18
+      // if(age >= 18){
+      //     if(age >= 60){
+      //         console.log("Senior")
+      //     }else{
+      //         console.log("Young")
+      //     }
+      // }else{
+      //     console.log("Child")
+      // }
+
+        // function getData(dataId) {
+        //   console.log("Get Data", dataId);
+        // }
+
+      // jo tamaro data load leva ma 2 Second ni vaar lagade to
+        // function getData(dataId) {
+        //   setTimeout(() => {
+        //       console.log("Get Data", dataId);
+
+        //   },2000);
+        // }
+        // getData(1);
+        // getData(2);
+        // getData(3);
+      //   jo tamare Data1 mali jaay pachi data 2 male , te mali jaay pachi data3
+
+      function getData(dataId, getNextData) {
+        setTimeout(() => {
+          console.log("Get Data", dataId);
+          getNextData();
+        }, 2000);
+      }
+
+
+getData(1, () =>{
+  getData(2, ()=>{
+    getData(3,()=>{
+      
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+      // getData(1, () =>{
+      //   getData(2, () =>{
+      //       getData(3, () =>{
+      //         getData(4, () =>{
+      //           getData(5)
+      //         })
+      //       })
+      //   });
+      // })
+    </script>
+  </body>
+</html>

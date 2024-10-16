@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(a, b) {
+        console.log(a + b);
+      }
+
+      function calculator(a, b, sumCallback) {
+        sumCallback(a, b);
+      }
+
+      //Callback function
+      calculator(10, 20, sum);
+
+
+
+
+
+
+
+      //Callback function syntax short using arrow function
+      calculator(2, 3, (a, b) => {
+        console.log(a + b);
+      });
+
+      //Callback
+      const hello = () =>{
+
+        console.log("Hello");
+
+      }
+
+      setTimeout(hello,2000);
+
+    </script>
+  </body>
+</html>

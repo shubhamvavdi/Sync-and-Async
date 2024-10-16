@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const stripe = require('stripe')('your_stripe_secret_key');
+stripe.charges.create({
+  amount: 2000,
+  currency: 'usd',
+  source: 'tok_visa', // obtained from Stripe.js
+  description: 'My First Test Charge (created for API docs)',
+}, function(err, charge) {
+  // asynchronously called
+});
+
+    </script>
+</body>
+</html>
